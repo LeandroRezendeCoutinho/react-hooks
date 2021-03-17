@@ -4,6 +4,13 @@ import DataContext from "../../data/DataContext";
 
 const UseContext = (props) => {
   const context = useContext(DataContext)
+
+  function setNumber(num) {
+    context.setState({
+      ...context.state,
+      number: num
+    })
+  }
   return (
     <div className="UseContext">
       <PageTitle
